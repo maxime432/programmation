@@ -20,6 +20,7 @@
 		<section>
 			<p>
 				<label for="name"> <?php echo $name ?>  <?php echo $firstname ?>	</label>
+				<label for="name"> <?php echo "Maxime"> </label>
 			</p>
 		</section>
 
