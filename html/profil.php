@@ -1,6 +1,6 @@
 <?php
 
-	$name ="Max" ;
+	$name ="Max"
 
 ?>
 
@@ -18,7 +18,7 @@
 
 		<section>
 			<p>
-				<label for="name"> <?php echo $name> </label>
+				<label for="name"> <?php echo $name ?> </label>
 			</p>
 		</section>
 
