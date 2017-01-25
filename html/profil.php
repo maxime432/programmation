@@ -1,9 +1,3 @@
-<?php
-
-	$name ="Max" ;
-
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,7 +12,7 @@
 
 		<section>
 			<p>
-				<label for="name"> <?php echo $name> </label>
+				<label for="name"> <?php echo "Maxime"> </label>
 			</p>
 		</section>
 
