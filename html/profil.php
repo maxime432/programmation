@@ -1,6 +1,7 @@
 <?php
 
-	$name ="Max"
+	$firstname ="Max";
+	$name ="Beaudouin";
 
 ?>
 
@@ -18,7 +19,7 @@
 
 		<section>
 			<p>
-				<label for="name"> <?php echo $name ?> </label>
+				<label for="name"> <?php echo $name ?>  <?php echo $firstname ?>	</label>
 			</p>
 		</section>
 
