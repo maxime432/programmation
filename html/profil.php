@@ -1,14 +1,14 @@
 <?php
-	include("include/connexion.php") ;
+	//include("include/connexion.php") ;
 
-	$requete_select = $bdd->prepare('SELECT nom, prenom, nom_utilisateur, adresse_mail FROM membres LIMIT 1');
-	$requete_select->execute() ;
-	$donnees_profil = $requete_select.fetch() ;
+	//$requete_select = $bdd->prepare('SELECT nom, prenom, nom_utilisateur, adresse_mail FROM membres LIMIT 1');
+	//$requete_select->execute() ;
+	//$donnees_profil = $requete_select.fetch() ;
 
-	$name = $donnees_profil['nom'] ;
-	$firstname = $donnees_profil['prenom'] ;
-	$nickname = $donnees_profil['nom_utilisateur'];
-	$mail = $donnees_profil['adresse_mail'] ;
+	$name = 'Beaudouin' ; //$donnees_profil['nom'] ;
+	$firstname = 'Max' ; //$donnees_profil['prenom'] ;
+	$nickname = 'Maxime432' ; // $donnees_profil['nom_utilisateur'];
+	$mail = 'maxime432@hotmail.fr' ; // $donnees_profil['adresse_mail'] ;
 ?>
 <!DOCTYPE html>
 <html>
