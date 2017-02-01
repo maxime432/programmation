@@ -30,7 +30,7 @@
 			</p>
 
 			<form method="POST" action="edit_profil.php">
-				<button type="submit" value="Editer" />
+				<input type="submit" value="Editer" />
 			</form>
 		</section>
 
