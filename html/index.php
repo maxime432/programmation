@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style_adept.css" />
         <title>ADEPT - Accueil</title>
     </head>
