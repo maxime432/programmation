@@ -10,11 +10,16 @@
     <body>
       <div id="bloc_page">
         <header>
-          <div id="logo">
+          <!--<div id="logo">
 	       <img src="images/logo.jpg" alt="Logo d'ADEPT" />    
-          </div>
+          </div>-->
         </header>
             
+        <div class="col-md-12">
+            <div id="logo">
+               <img src="images/logo.jpg" alt="Logo d'ADEPT" />    
+            </div>
+        </div>
 
 
         <div class="container">
