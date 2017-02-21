@@ -1,7 +1,7 @@
 
 
 <div class="container">
-	<div class="col-lg-2">
+	<div class="col-sm-2">
 	    <ul class="list-group">
 	      <li class="list-group-item list-group-item-success">Accueil</li>
 	      <li class="list-group-item list-group-item-info">Mon profil</li>
