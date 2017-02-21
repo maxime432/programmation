@@ -4,24 +4,3 @@ body
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
 }
-
-#bloc_page
-{
-    width: 900px;
-    margin: auto;
-}
-
-header
-{
-    background: url('images/separateur.png') repeat-x bottom;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-#logo
-{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}

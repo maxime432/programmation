@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style_adept.css" />
+        <!--<link rel="stylesheet" href="style_adept.css" />-->
         <title>ADEPT - Accueil</title>
     </head>
         
@@ -16,11 +16,7 @@
                 </div>
             </div>
         </header>
-            
-        
-
-
-        
+                
         <div class="col-md-2">
             <?php include("menus.php"); ?>
         </div>
@@ -46,7 +42,7 @@
 
         <footer class="row">
         </footer>
-        
+
        </div>
     </body>
 </html>
