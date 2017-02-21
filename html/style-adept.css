@@ -18,3 +18,10 @@ header
     justify-content: space-between;
     align-items: flex-end;
 }
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
