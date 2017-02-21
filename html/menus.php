@@ -1,7 +1,4 @@
 
-
-<div class="container">
-	<div class="col-md-2">
 	    <ul class="list-group">
 	      <li class="list-group-item list-group-item-success">Accueil</li>
 	      <li class="list-group-item list-group-item-info">Mon profil</li>
@@ -16,5 +13,3 @@
 	      <li class="list-group-item list-group-item-info">Administration</li>
 	      <li class="list-group-item list-group-item-info">Déconnexion</li>
 	    </ul>
-	</div>
-</div>

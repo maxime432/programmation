@@ -15,11 +15,13 @@
           </div>
         </header>
             
-        <?php include("menus.php"); ?>
 
 
         <div class="container">
-            <div class="col-md-8">
+            <div class="col-md-2">
+                <?php include("menus.php"); ?>
+            </div>
+            <div class="col-md-10">
                 <div id="titre_page">
                   <h1>Bienvenu chez ADEPT </h1>
                   <h2>Association de la Découverte, de l'Echange et du ParTage</h2>
