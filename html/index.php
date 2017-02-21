@@ -35,6 +35,10 @@
                     </p>
                   </article>
                 </section>
+
+                <div id="image_accueil">
+                    <img src="images/images_accueil.jpeg" alt="Image d'une cavité" />
+                </div>  
             </div>
         </div>
 
@@ -43,9 +47,7 @@
 
     	
 
-        <div id="image_accueil">
-    	  <img src="images/images_accueil.jpeg" alt="Image d'une cavité" />
-        </div>
+        
         <footer>
         </footer>
        </div>
