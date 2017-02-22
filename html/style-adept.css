@@ -4,3 +4,7 @@ body
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
 }
+
+header img{
+    max-width: 100%;
+}
