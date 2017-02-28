@@ -1,5 +1,5 @@
 <?php
-    $menu="Accueil";
+    $menu="Photos";
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
         <meta charset="utf-8" />
         <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style-adept.css" >
-        <title>ADEPT - Accueil</title>
+        <title>ADEPT - Photos</title>
     </head>
         
     <body>
