@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style-adept.css" >
+        <link rel="stylesheet" href="css/style-adept.css" >
         <title>ADEPT - Accueil</title>
     </head>
         

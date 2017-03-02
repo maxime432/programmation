@@ -3,7 +3,7 @@
 
 	    <!-- Accueil -->
 	    	<?php 
-	    		if ($menu--"Accueil")  {
+	    		if ($menu=="Accueil")  {
 	    	?>
 	      	<a href="index.php" class="list-group-item list-group-item-success">Accueil</a>
 	      	<?php 
@@ -16,7 +16,7 @@
 
 	    <!-- Photos -->
 	    	<?php 
-	    		if ($menu--"Photos")  {
+	    		if ($menu=="Photos")  {
 	    	?>
 	      	<a href="photos.php" class="list-group-item list-group-item-success">Photos</a>
 	      	<?php 
@@ -28,10 +28,10 @@
 	       	 ?>
 	      <li class="list-group-item list-group-item-info">Vidéos</li>
 	      <li class="list-group-item list-group-item-info">Calendrier</li>
-	      <li class="list-group-item list-group-item-info">Membres</li>li>
-	      <li class="list-group-item list-group-item-info">Initiation</li>li>
-	      <li class="list-group-item list-group-item-info">Contact</li>li>
-	      <li class="list-group-item list-group-item-info">Connexion</li>li>
+	      <li class="list-group-item list-group-item-info">Membres</li>
+	      <li class="list-group-item list-group-item-info">Initiation</li>
+	      <li class="list-group-item list-group-item-info">Contact</li>
+	      <li class="list-group-item list-group-item-info">Connexion</li>
 	      <li class="list-group-item list-group-item-info">Mon profil</li>
 	      <li class="list-group-item list-group-item-info">Messagerie</li>
 	      <li class="list-group-item list-group-item-info">Membres</li>

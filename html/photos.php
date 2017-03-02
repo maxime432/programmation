@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style-adept.css" >
+        <link rel="stylesheet" href="css/style-adept.css" >
         <title>ADEPT - Photos</title>
     </head>
         
@@ -51,4 +51,6 @@
 
        </div>
     </body>
+
+    <script src="js/jquery.js"></script>
 </html>
