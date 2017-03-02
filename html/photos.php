@@ -26,23 +26,23 @@
                 <?php include("menus.php"); ?>
             </div>
             <div class="col-md-10">
-                <div id="titre_page">
-                    <h1>Bienvenu chez ADEPT </h1>
-                    <h2>Association de la Découverte, de l'Echange et du ParTage</h2>
-                </div>
-                <section>
-                    <article>
-                        <h3>Création de l'association :</h3>
-                        <p>ADEPT est née le 6 juillet 2016. Voulant faire découvrir et partager leurs passions au plus grand nombre, sept amis se sont regroupé et ont décidé de créer une dynamique autour d'activités sportives.
-                        </p>
-                        <p>Attirés vers la randonnée, le vélo de montagne et la spéléologie, c'est vers ces activités qu'ils se dirigent au départ. Ils organisent régulièrement des initiations et sorties en Alsace, permettant la découverte de la richesse naturelle de cette région.
-                        </p>
-                    </article>
-                </section>
 
-                <div id="image_accueil">
-                    <img src="images/images_accueil.jpeg" alt="Image d'une cavité" />
-                </div>  
+
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="item active"> <img alt="" src="photos/speleologie/groupe_1_photo_1.JPG"></div>
+                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_2.JPG"></div>
+                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_3.JPG"></div>
+                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_4.JPG"></div>
+                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_5.JPG"></div>
+                  </div>
+                  <a class="left carousel-control" href="#carousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
             </div>
         </div>
            
@@ -52,5 +52,6 @@
        </div>
     </body>
 
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="include/js/jquery.js"></script>
+    <script type="text/javascript" src="include/bootstrap/js/bootstrap.min.js"></script>
 </html>
