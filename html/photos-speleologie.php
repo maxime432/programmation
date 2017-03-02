@@ -26,30 +26,6 @@
                 <?php include("menus.php"); ?>
             </div>
 
-            <!-- Pour la spéléo-->
-            <div class="col-md-3">
-                <a href="photos-speleologie.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_speleologie.JPG">
-                </a>
-            </div>
-
-
-            <!-- Pour la randonnée-->
-            <div class="col-md-3">
-                <a href="photos-randonnee.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_randonnee.JPG">
-                </a>
-            </div>
-
-
-
-            <!-- Pour le VTT-->
-            <div class="col-md-3">
-                <a href="photos-vtt.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_vtt.JPG">
-                </a>
-            </div>
-
 
             <div class="col-md-10">
 
