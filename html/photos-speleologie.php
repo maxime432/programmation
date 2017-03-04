@@ -10,7 +10,7 @@
     include("include/objet/OPhoto.php");
     include("include/objet/OGroupePhotos.php");
 
-    $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, gp.description, date FROM nom_groupe_photos gp
+    $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, gp.description, date, gp.idx_type_groupe_photos FROM groupe_photos gp
             INNER JOIN type_groupe_photos tgp ON tgp.idx_type_groupe_photos = gp.idx_type_groupe_photos
             WHERE tgp.description=:type' );
     $requete_select->execute(array('type' => $type) );
@@ -30,7 +30,7 @@
 
         $donnees_groupe_page[$donnees_groupe_photos->idx_groupe_photos] = $groupe_photo;
 
-        $requete_select_photos = $bdd->prepare('SELECT idx_photos_excursions, nom_photos_excursion, description, url, idx_groupe_photos WHERE idx_groupe_photos = :idx_groupe_photos ');
+        $requete_select_photos = $bdd->prepare('SELECT idx_photos_excursions, nom_photos_excursion, description, url, idx_groupe_photos FROM photos_excursions WHERE idx_groupe_photos = :idx_groupe_photos ');
 
         $requete_select_photos->execute(array('idx_groupe_photos' => $donnees_groupe_photos->idx_groupe_photos));
 
@@ -39,8 +39,8 @@
         while($donnees_photos = $requete_select_photos->fetch(PDO::FETCH_OBJ))
         {
             $photo = new OPhoto();
-            $photo->idx_photo = $donnees_photos->idx_photo;
-            $photo->nom = $donnees_photos->nom_photos_excursion;
+            $photo->idx_photo = $donnees_photos->idx_photos_excursions;
+            $photo->nom = $donnees_photos->nom_photos_excursions;
             $photo->description = $donnees_photos->description;
             $photo->url = $donnees_photos->url ;
             $photo->idx_groupe_photos = $donnees_photos->idx_groupe_photos;
