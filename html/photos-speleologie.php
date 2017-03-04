@@ -1,5 +1,45 @@
 <?php
+    $type="Spéléogie"
+
+?>
+
+<?php
     $menu="Photos";
+
+    include("include/connexion.php") ;
+    include("include/objet/OPhoto.php")
+
+    $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, description, date FROM nom_groupe_photos ngp 
+            INNER JOIN type_groupe_photos tgp ON tgp.idx_type_groupe_photos = ngp.idx_type_groupe_photos
+            WHERE tgp.description=:type');
+    $requete_select->execute(array('type' => $type) );
+
+    $donnees_groupe_photos_page = array();
+
+    while($donnees_groupe_photos = $requete_select->fetch(PDO::FETCH_OBJ))
+    {
+        $requete_select_photos = $bdd->prepare('SELECT id_photos_excursions, nom_photos_excursion, description, url, idx_groupe_photos WHERE idx_groupe_photos = :idx_groupe_photos '); 
+
+        $requete_select_photos->execute(array('idx_groupe_photos' => $donnees_groupe_photos->idx_groupe_photos));
+
+        $compteur_photo=0;
+
+        while($donnees_photos = $requete_select_photos->fetch(PDO::FETCH_OBJ))
+        {
+            $photo = new OPhoto();
+            $photo->idx_photo = $donnees_photos->idx_photo;
+            $photo->nom = $donnees_photos->nom_photos_excursion;
+            $photo->description = $donnees_photos->description;
+            $photo->url = $donnees_photos->url ;
+            $photo->idx_groupe_photos = $donnees_photos->idx_groupe_photos;
+
+            $donnees_groupe_photos_page[$photo->idx_groupe_photos][$compteur_photo] = $photo ;
+
+            $compteur_photo++;
+
+        }
+
+    }
 ?>
 
 <!DOCTYPE html>

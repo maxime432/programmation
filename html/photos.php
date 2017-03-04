@@ -12,7 +12,7 @@
     </head>
         
     <body>
-      <div class="container">
+      <div class="container fond">
         <header class="row">
             <div class="col-md-12">
                 <div id="logo">
@@ -20,56 +20,47 @@
                 </div>
             </div>
         </header>
-             
+
         <div class="row">
             <div class="col-md-2">
                 <?php include("menus.php"); ?>
             </div>
 
-            <!-- Pour la spéléo-->
-            <div class="col-md-3">
-                <a href="photos-speleologie.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_speleologie.JPG">
-                </a>
-            </div>
+            <div class="col-md-10 text-center margin-top">
+                <!-- Pour la spéléo-->
+                <div class="col-md-3">
+                    <a href="photos-speleologie.php">
+                        <img alt="Acces photos spéléologie" src="photos/photo_speleologie.jpg">
+                        <div class="lien-photos">
+                            Spéléologie
+                        </div>
+                    </a>
+                </div>
 
 
-            <!-- Pour la randonnée-->
-            <div class="col-md-3">
-                <a href="photos-randonnee.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_randonnee.JPG">
-                </a>
-            </div>
+                <!-- Pour la randonnée-->
+                <div class="col-md-3">
+                    <a href="photos-randonnee.php">
+                        <img alt="Acces photos randonnée" src="photos/photo_randonnee.jpg">
+                        <div class="lien-photos">
+                            Randonnée
+                        </div>
+                    </a>
+                </div>
 
 
 
-            <!-- Pour le VTT-->
-            <div class="col-md-3">
-                <a href="photos-vtt.php">
-                    <img alt="Acces photos spéléologie" src="photos/photos_vtt.JPG">
-                </a>
-            </div>
-
-
-            <div class="col-md-10">
-
-
-                <div id="carousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="item active"> <img alt="" src="photos/speleologie/groupe_1_photo_1.JPG"></div>
-                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_2.JPG"></div>
-                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_3.JPG"></div>
-                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_4.JPG"></div>
-                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_5.JPG"></div>
-                  </div>
-                  <a class="left carousel-control" href="#carousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
+                <!-- Pour le VTT-->
+                <div class="col-md-3">
+                    <a href="photos-vtt.php">
+                        <img alt="Acces photos VTT" src="photos/photo_vtt.jpg">
+                        <div class="lien-photos">
+                            VTT
+                        </div>
+                    </a>
                 </div>
             </div>
+
         </div>
            
         <footer class="row">
