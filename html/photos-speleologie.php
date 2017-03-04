@@ -79,11 +79,15 @@
             </div>
 
 
-            <div class="col-md-4 col-md-offset-6 margin-top">
+            <div class="col-md-4 col-md-offset-5 margin-top">
 
+                <?php  foreach ($donnees_groupe_page as $dgp) : ?>
 
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner">
+                    <?php  foreach ($donnees_groupe_photos_page as $dgpp) : ?>
+                        <div class="item"> <img alt=<?php echo $dgpp->description; ?>  src= <?php echo "photos/speleologie/" . $dgpp->url; ?> ></div>
+                    <?php  endforeach ?>
                     <div class="item active"> <img alt="" src="photos/speleologie/groupe_1_photo_1.JPG"></div>
                     <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_2.JPG"></div>
                     <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_3.JPG"></div>
@@ -97,6 +101,8 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                   </a>
                 </div>
+
+                <?php  endforeach ?>
             </div>
         </div>
 
