@@ -6,6 +6,6 @@
 	    var $nom;
 		var $url;
 		var $description;
-		var $idx_groupe_photo;
+		var $idx_groupe_photos;
 	}
 ?>

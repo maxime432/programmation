@@ -28,7 +28,7 @@
 
             <div class="col-md-10 text-center margin-top">
                 <!-- Pour la spéléo-->
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <a href="photos-speleologie.php">
                         <img alt="Acces photos spéléologie" src="photos/photo_speleologie.jpg">
                         <div class="lien-photos">
@@ -39,7 +39,7 @@
 
 
                 <!-- Pour la randonnée-->
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <a href="photos-randonnee.php">
                         <img alt="Acces photos randonnée" src="photos/photo_randonnee.jpg">
                         <div class="lien-photos">
@@ -51,7 +51,7 @@
 
 
                 <!-- Pour le VTT-->
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <a href="photos-vtt.php">
                         <img alt="Acces photos VTT" src="photos/photo_vtt.jpg">
                         <div class="lien-photos">

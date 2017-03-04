@@ -1,5 +1,5 @@
 <?php
-    $type="Spéléogie"
+    $type="Spéléologie";
 
 ?>
 
@@ -7,18 +7,30 @@
     $menu="Photos";
 
     include("include/connexion.php") ;
-    include("include/objet/OPhoto.php")
+    include("include/objet/OPhoto.php");
+    include("include/objet/OGroupePhotos.php");
 
-    $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, description, date FROM nom_groupe_photos ngp 
-            INNER JOIN type_groupe_photos tgp ON tgp.idx_type_groupe_photos = ngp.idx_type_groupe_photos
-            WHERE tgp.description=:type');
+    $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, gp.description, date FROM nom_groupe_photos gp
+            INNER JOIN type_groupe_photos tgp ON tgp.idx_type_groupe_photos = gp.idx_type_groupe_photos
+            WHERE tgp.description=:type' );
     $requete_select->execute(array('type' => $type) );
 
     $donnees_groupe_photos_page = array();
+    $donnees_groupe_page = array();
 
+    $donnees_test ;
     while($donnees_groupe_photos = $requete_select->fetch(PDO::FETCH_OBJ))
     {
-        $requete_select_photos = $bdd->prepare('SELECT id_photos_excursions, nom_photos_excursion, description, url, idx_groupe_photos WHERE idx_groupe_photos = :idx_groupe_photos '); 
+        $groupe_photo = new OGroupePhotos() ;
+        $groupe_photo->idx_groupe_photos = $donnees_groupe_photos->idx_groupe_photos;
+        $groupe_photo->date = $donnees_groupe_photos->date;
+        $groupe_photo->description = $donnees_groupe_photos->description;
+        $groupe_photo->idx_type_groupe_photos = $donnees_groupe_photos->idx_type_groupe_photos;
+        $groupe_photo->nom_groupe_photos = $donnees_groupe_photos->nom_groupe_photos;
+
+        $donnees_groupe_page[$donnees_groupe_photos->idx_groupe_photos] = $groupe_photo;
+
+        $requete_select_photos = $bdd->prepare('SELECT idx_photos_excursions, nom_photos_excursion, description, url, idx_groupe_photos WHERE idx_groupe_photos = :idx_groupe_photos ');
 
         $requete_select_photos->execute(array('idx_groupe_photos' => $donnees_groupe_photos->idx_groupe_photos));
 
@@ -52,7 +64,7 @@
     </head>
         
     <body>
-      <div class="container">
+      <div class="container fond">
         <header class="row">
             <div class="col-md-12">
                 <div id="logo">
@@ -67,7 +79,7 @@
             </div>
 
 
-            <div class="col-md-10">
+            <div class="col-md-4 col-md-offset-6 margin-top">
 
 
                 <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -87,6 +99,9 @@
                 </div>
             </div>
         </div>
+
+        <pre><?php print_r($donnees_groupe_page); ?></pre>
+        <pre><?php print_r($donnees_groupe_photos_page) ; ?></pre>
            
         <footer class="row">
         </footer>

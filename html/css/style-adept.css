@@ -11,10 +11,13 @@ img{
     color: #000000;
 }
 
+a:hover{
+	text-decoration: none;
+}
 .margin-top{
     margin-top: 10%;
 }
 
 .fond {
-    color: #DDDDDD;
+    background-color: #d9edf7;
 }
