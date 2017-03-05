@@ -107,11 +107,11 @@
                     <div class="row" >
                         <h1> <?php echo $dgp->date . ' - ' . $dgp->nom_groupe_photos ;  ?></h1>
 
-                            <div class="col-md-5 margin-top">
+                            <div class="col-md-4 margin-top">
                                 <p><?php echo $dgp->description ; ?> </p>
                             </div>
 
-                            <div class="col-md-5 col-md-offset-1 margin-top">
+                            <div class="col-md-4 col-md-offset-1 margin-top">
                                 <div id="<?php echo 'carousel-' . $dgp->idx_groupe_photos ; ?>" class="carousel slide" date-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php foreach($donnees_groupe_photos_page[$dgp->idx_groupe_photos] as $dgpp ) : ?>
