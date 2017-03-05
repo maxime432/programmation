@@ -79,61 +79,63 @@
                 <?php include("menus.php"); ?>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-5 margin-top">
-                        <div id="carousel" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="item active"> <img alt="" src="photos/speleologie/groupe_1_photo_1.JPG"></div>
-                                <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_2.JPG"></div>
-                                <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_3.JPG"></div>
-                                <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_4.JPG"></div>
-                                <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_5.JPG"></div>
-                            </div>
-
-                            <a class="left carousel-control" href="#carousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <?php  $premiere_image = true; foreach($donnees_groupe_page as $dgp ) : ?>
-                <div class="row" >
-                    <h1> <?php echo $dgp->date . ' - ' . $dgp->nom_groupe_photos ;  ?></h1>
-
-                        <div class="col-md-3 margin-top">
-                            <p><?php echo $dgp->description ; ?> </p>
-                        </div>
-
-                        <div class="col-md-5 col-md-offset-5 margin-top">
-                            <div id="<?php echo 'carousel-' . $dgp->idx_groupe_photos ; ?>" class="carousel slide" date-ride="carousel">
+            <div class="col-md-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-5 margin-top">
+                            <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <?php foreach($donnees_groupe_photos_page[$dgp->idx_groupe_photos] as $dgpp ) : ?>
-                                    <?php  if ($premiere_image) : ?>  <div class="item active">  <?php $premiere_image = false; ?>
-                                    <?php else : ?> <div class="item">
-                                    <?php endif ; ?>
-                                    <img alt="<?php echo $dgpp->description ; ?>" src="<?php echo  $url_photos . $dgpp->url ; ?>" >
-                                    </div>
-
-                                    <?php  endforeach ; ?>
+                                    <div class="item active"> <img alt="" src="photos/speleologie/groupe_1_photo_1.JPG"></div>
+                                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_2.JPG"></div>
+                                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_3.JPG"></div>
+                                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_4.JPG"></div>
+                                    <div class="item"> <img alt="" src="photos/speleologie/groupe_1_photo_5.JPG"></div>
                                 </div>
-                                <a class="left carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="prev">
+
+                                <a class="left carousel-control" href="#carousel" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
                                 </a>
-                                <a class="right carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="next">
+                                <a class="right carousel-control" href="#carousel" data-slide="next">
                                     <span class="glyphicon glyphicon-chevron-right"></span>
                                 </a>
                             </div>
-                        </div>
 
+                        </div>
+                    </div>
+
+                    <?php  $premiere_image = true; foreach($donnees_groupe_page as $dgp ) : ?>
+                    <div class="row" >
+                        <h1> <?php echo $dgp->date . ' - ' . $dgp->nom_groupe_photos ;  ?></h1>
+
+                            <div class="col-md-5 margin-top">
+                                <p><?php echo $dgp->description ; ?> </p>
+                            </div>
+
+                            <div class="col-md-5 col-md-offset-1 margin-top">
+                                <div id="<?php echo 'carousel-' . $dgp->idx_groupe_photos ; ?>" class="carousel slide" date-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <?php foreach($donnees_groupe_photos_page[$dgp->idx_groupe_photos] as $dgpp ) : ?>
+                                        <?php  if ($premiere_image) : ?>  <div class="item active">  <?php $premiere_image = false; ?>
+                                        <?php else : ?> <div class="item">
+                                        <?php endif ; ?>
+                                        <img alt="<?php echo $dgpp->description ; ?>" src="<?php echo  $url_photos . $dgpp->url ; ?>" >
+                                        </div>
+
+                                        <?php  endforeach ; ?>
+                                    </div>
+                                    <a class="left carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                    </div>
+                    <?php  endforeach ; ?>
                 </div>
-                <?php  endforeach ; ?>
-           </div>
+            </div>
         </div>
            
         <footer class="row">
