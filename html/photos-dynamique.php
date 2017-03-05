@@ -76,7 +76,8 @@
 
             <div class="col-md-10">
                 <div class="container">
-                    <?php  $premiere_image = true; foreach($donnees_groupe_page as $dgp ) : ?>
+                    <?php  foreach($donnees_groupe_page as $dgp ) : ?>
+                    <?php $premiere_image = true; ?>
                     <div class="row" >
                         <h1> <?php echo $dgp->date . ' - ' . $dgp->nom_groupe_photos ;  ?></h1>
 
