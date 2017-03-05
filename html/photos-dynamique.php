@@ -8,7 +8,7 @@
 
     $requete_select = $bdd->prepare('SELECT idx_groupe_photos, nom_groupe_photos, gp.description, date, gp.idx_type_groupe_photos FROM groupe_photos gp
             INNER JOIN type_groupe_photos tgp ON tgp.idx_type_groupe_photos = gp.idx_type_groupe_photos
-            WHERE tgp.description=:type' );
+            WHERE tgp.description=:type ORDER BY date DESC ' );
     $requete_select->execute(array('type' => $type) );
 
     $donnees_groupe_photos_page = array();
