@@ -27,6 +27,7 @@
             </div>
 
             <div class="col-md-10 text-center margin-top">
+                <h1>Photos</h1>
                 <!-- Pour la spéléo-->
                 <div class="col-md-4">
                     <a href="photos-speleologie.php">
