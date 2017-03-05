@@ -1,10 +1,3 @@
-<?php
-    $type="Spéléologie";
-    $url_photos="photos/speleologie/";
-
-?>
-
-<?php include("photos_dynamique.php"); ?>
 
 <?php
     $menu="Photos";
