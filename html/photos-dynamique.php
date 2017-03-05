@@ -55,6 +55,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="include/swiper/css/swiper.min.css">
         <link rel="stylesheet" href="css/style-adept.css" >
         <title>ADEPT - Photos</title>
     </head>
@@ -109,6 +110,42 @@
                     </div>
                     <?php  endforeach ; ?>
                 </div>
+
+
+                <div class="col-md-10">
+                <div class="container">
+                    <?php  foreach($donnees_groupe_page as $dgp ) : ?>
+                    <div class="row" >
+                        <h1> <?php echo $dgp->date . ' - ' . $dgp->nom_groupe_photos ;  ?></h1>
+
+                            <div class="col-md-4 margin-top">
+                                <p><?php echo $dgp->description ; ?> </p>
+                            </div>
+
+                            <div class="col-md-4 col-md-offset-1 margin-top">
+                                <div id="<?php echo 'carousel-' . $dgp->idx_groupe_photos ; ?>" class="carousel slide" date-ride="carousel">
+                                    <div class="swiper-container">
+                                    	<div class="swiper-wrapper">
+
+                                        <?php foreach($donnees_groupe_photos_page[$dgp->idx_groupe_photos] as $dgpp ) : ?>
+                                       		<div class="swiper-slide" style="background-image:url(<?php echo  $url_photos . $dgpp->url ; ?>)"></div>
+                                        <?php  endforeach ; ?>
+                                        </div>
+                                        <!-- Add Pagination -->
+        								<div class="swiper-pagination"></div>
+                                    </div>
+                                    <a class="left carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="<?php echo '#carousel-' . $dgp->idx_groupe_photos ; ?>"  data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                    </div>
+                    <?php  endforeach ; ?>
+                </div>
             </div>
         </div>
            
@@ -120,4 +157,23 @@
 
     <script type="text/javascript" src="include/js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="include/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="include/swiper/js/jquery.js"></script>
+    <script type="text/javascript" src="include/swiper/js/swiper.jquery.min.js"></script>
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+    </script>
 </html>
