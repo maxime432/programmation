@@ -4,4 +4,4 @@
 
 ?>
 
-<?php include("photos_dynamique.php"); ?>
+<?php include("photos-dynamique.php"); ?>
