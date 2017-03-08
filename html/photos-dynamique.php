@@ -24,8 +24,6 @@
         $groupe_photo->idx_type_groupe_photos = $donnees_groupe_photos->idx_type_groupe_photos;
         $groupe_photo->nom_groupe_photos = $donnees_groupe_photos->nom_groupe_photos;
 
-        $donnees_groupe_page[$donnees_groupe_photos->idx_groupe_photos] = $groupe_photo;
-
         $requete_select_photos = $bdd->prepare('SELECT idx_photos_excursions, nom_photos_excursions, description, url, idx_groupe_photos FROM photos_excursions WHERE idx_groupe_photos = :idx_groupe_photos ');
 
         $requete_select_photos->execute(array('idx_groupe_photos' => $donnees_groupe_photos->idx_groupe_photos));
@@ -46,6 +44,10 @@
             $compteur_photo++;
 
         }
+
+        if ($compteur_video > 0){
+			$donnees_groupe_page[$donnees_groupe_photos->idx_groupe_photos] = $groupe_photo;
+		}
 
     }
 ?>
