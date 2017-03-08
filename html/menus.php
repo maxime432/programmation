@@ -26,7 +26,19 @@
 	       	<?php 
 	       	 	}
 	       	 ?>
-	      <li class="list-group-item list-group-item-info">Vidéos</li>
+
+	       	 <!-- Vidéos -->
+	    	<?php 
+	    		if ($menu=="Vidéos")  {
+	    	?>
+	      	<a href="photos.php" class="list-group-item list-group-item-success">Vidéos</a>
+	      	<?php 
+	  			} else {
+	       	?>
+	       	<a href="photos.php" class="list-group-item list-group-item-info">Vidéos</a>
+	       	<?php 
+	       	 	}
+	       	 ?>
 	      <li class="list-group-item list-group-item-info">Calendrier</li>
 	      <li class="list-group-item list-group-item-info">Membres</li>
 	      <li class="list-group-item list-group-item-info">Initiation</li>
