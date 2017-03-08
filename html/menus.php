@@ -31,11 +31,11 @@
 	    	<?php 
 	    		if ($menu=="Vidéos")  {
 	    	?>
-	      	<a href="photos.php" class="list-group-item list-group-item-success">Vidéos</a>
+	      	<a href="videos.php" class="list-group-item list-group-item-success">Vidéos</a>
 	      	<?php 
 	  			} else {
 	       	?>
-	       	<a href="photos.php" class="list-group-item list-group-item-info">Vidéos</a>
+	       	<a href="videos.php" class="list-group-item list-group-item-info">Vidéos</a>
 	       	<?php 
 	       	 	}
 	       	 ?>
