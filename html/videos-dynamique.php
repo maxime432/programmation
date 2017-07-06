@@ -7,7 +7,7 @@
     include("include/objet/OGroupeVideos.php");
 
     $requete_select = $bdd->prepare('SELECT idx_groupe_videos, nom_groupe_videos, gv.description, date, gv.idx_type_groupe_videos FROM groupe_videos gv
-            INNER JOIN type_groupe_videos tgv ON tgv.idx_type_groupe_videos = gp.idx_type_groupe_videos
+            INNER JOIN type_groupe_videos tgv ON tgv.idx_type_groupe_videos = gv.idx_type_groupe_videos
             WHERE tgv.description=:type ORDER BY date DESC ' );
     $requete_select->execute(array('type' => $type) );
 
@@ -24,7 +24,7 @@
         $groupe_video->idx_type_groupe_video = $donnees_groupe_video->idx_type_groupe_video;
         $groupe_video->nom_groupe_video = $donnees_groupe_video->nom_groupe_video;
 
-        $requete_select_videos = $bdd->prepare('SELECT idx_videos_excursions, nom_videos_excursions, description, url, idx_groupe_video FROM videos_excursions WHERE idx_groupe_video = :idx_groupe_video ');
+        $requete_select_videos = $bdd->prepare('SELECT idx_videos_excursions, nom_videos_excursions, description, url, idx_groupe_videos FROM videos_excursions WHERE idx_groupe_videos = :idx_groupe_video ');
 
         $requete_select_videos->execute(array('idx_groupe_video' => $donnees_groupe_video->idx_groupe_video));
 
