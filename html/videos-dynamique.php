@@ -96,7 +96,7 @@
 
 									<?php foreach($donnees_groupe_video_page[$dgp->idx_groupe_videos] as $dgpp ) : ?>
 										<div class="swiper-slide">
-                                            <iframe width="560" height="315" src=<?php echo  '"'.$dgpp->url.'"' ; ?> frameborder="0" allowfullscreen></iframe>
+                                            <iframe width="380" height="225" src=<?php echo  '"'.$dgpp->url.'"' ; ?> frameborder="0" allowfullscreen></iframe>
                                         </div>
 									<?php  endforeach ; ?>
 									</div>
