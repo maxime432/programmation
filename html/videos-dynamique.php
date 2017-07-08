@@ -18,15 +18,15 @@
     while($donnees_groupe_video = $requete_select->fetch(PDO::FETCH_OBJ))
     {
         $groupe_video = new OGroupeVideos() ;
-        $groupe_video->idx_groupe_video = $donnees_groupe_video->idx_groupe_video;
+        $groupe_video->idx_groupe_video = $donnees_groupe_video->idx_groupe_videos;
         $groupe_video->date = $donnees_groupe_video->date;
         $groupe_video->description = $donnees_groupe_video->description;
-        $groupe_video->idx_type_groupe_video = $donnees_groupe_video->idx_type_groupe_video;
-        $groupe_video->nom_groupe_video = $donnees_groupe_video->nom_groupe_video;
+        $groupe_video->idx_type_groupe_video = $donnees_groupe_video->idx_type_groupe_videos;
+        $groupe_video->nom_groupe_video = $donnees_groupe_video->nom_groupe_videos;
 
         $requete_select_videos = $bdd->prepare('SELECT idx_videos_excursions, nom_videos_excursions, description, url, idx_groupe_videos FROM videos_excursions WHERE idx_groupe_videos = :idx_groupe_video ');
 
-        $requete_select_videos->execute(array('idx_groupe_video' => $donnees_groupe_video->idx_groupe_video));
+        $requete_select_videos->execute(array('idx_groupe_video' => $donnees_groupe_video->idx_groupe_videos));
 
         $compteur_video=0;
 
@@ -89,12 +89,12 @@
 								<p><?php echo $dgp->description ; ?> </p>
 							</div>
 
-							<div class="col-md-4 col-md-offset-1 margin-top">
+							<div class="col-md-8 margin-top">
 							
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
 
-									<?php foreach($donnees_groupe_video_page[$dgp->idx_groupe_video] as $dgpp ) : ?>
+									<?php foreach($donnees_groupe_video_page[$dgp->idx_groupe_videos] as $dgpp ) : ?>
 										<div class="swiper-slide">
                                             <iframe width="560" height="315" src=<?php echo  '"'.$dgpp->url.'"' ; ?> frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -136,7 +136,7 @@
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows : true
+            slideShadows : false
         }
     });
     </script>
